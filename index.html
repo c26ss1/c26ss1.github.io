@@ -25,20 +25,31 @@
 
 
 			}
+
+
 			#anim {
-  				width: 10vw;
- 				height: 100px;
- 				background-color: lightblue;
+			}
+			.button1{
+				background-color: lightblue;
   				animation-name: example;
   				animation-duration: 5s;
+  				font-size: 3vw;
+				text-align: center;
+				color: gray;
+				width: 12vw;
+ 				height: 80px;
   				position: absolute;
-  				bottom:2vw;
-  				right:2vw;
+  				bottom: 2vw;
+  				right: 2vw;
+  	
+  				display: inline-block;
+
 			}
 
 			@keyframes example{
   			from {background-color: navy;}
   			to {background-color: lightblue;}
+  	
 
 			}
 		
@@ -58,7 +69,11 @@
 		
 	</div>
 
-	<div id="anim"></div>
+	<div id="anim">
+		<a href="index.html">
+			<div class = "button1">Home</div>
+		</a>
+	</div>
 
 
 </body>
