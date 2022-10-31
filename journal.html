@@ -1,52 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>My Journal</title>
 	<style type="text/css">
-	#anim {
+			
+			body{
+				background-color: #073b4c;
+				margin:0px;
+			}
+			#menu{
+			
+			width:100%;
+			height:80px;
+			background-color:silver;
+			padding-top: 20px;
+			}
+
+			.button{
+				width:99%;
+				height: 100px;
+				display: inline-block;
+				font-size: 50px;
+				text-align: center;
+				color: #118ab2;
+				transition: 2s;
+
+
+			}
+
+
+			#anim {
 			}
 			.button1{
-				background-color: lightblue;
+				background-color: silver;
   				animation-name: example;
   				animation-duration: 5s;
   				font-size: 3vw;
 				text-align: center;
-				color: gray;
+				color: #118ab2;
 				width: 12vw;
  				height: 80px;
   				position: absolute;
-  				bottom:2vw;
-  				right:2vw;
+  				bottom: 2vw;
+  				right: 2vw;
+  	
   				display: inline-block;
+
 			}
 
 			@keyframes example{
-  			from {background-color: navy;}
-  			to {background-color: lightblue;}
+  			from {background-color: #073b4c;}
+  			to {background-color: silver;}
+  			from {color: #073b4c;}
+  			to {color: #118ab2;}
+  	
 
 			}
-		</style>
+
+			#body{
+				padding-left: 100px;
+				font-size: 2vw;
+				color: silver;
+			}
+		
+
+
+
+	</style>
 </head>
 <body>
-
-<h1>My Journal</h1>
-
-<h3>Entry #1 10/3/22</h3>
-<p>I think that Computer Science this year is going pretty well. I enjoy making the websites because it is visual and I can easily see my progress. I am looking forward for doing more work like this. </p>
-<h3>Entry #2 10/11/22</h3>
-<p>I enjoy making my website, it is cool to visualize your mistakes and progress. I am struggling with centering text, shapes, and images. I am a perfectionist when it comes to things like that, and it is hard to get alignment right. That being said, if I know what to look for, the internet is pretty helpful in solving coding issues. In the future I would like to expose myself to other parts of HTML and things to do. Right now, I feel pretty good with the basic stuff that we covered in class (divs, journals, and text), but I want to learn more so my websites can be more complex and functional. </p>
-<h3>Entry #3 10/20/22</h3>
-<p>I am having lots of trouble with images. I have tried to make it the background of my website and that failed. I have also tried to make the home button have a little icon instead of text and that didn't work too. I have also been having trouble with the animation and making it move. I made it move if it started from the div's original placement. However, as soon as I moved the div into my desired place(the bottom right corner), I cannot make it move arround. For both of the issues I have tried to fix them using the internet, but I have not found anything that fixed my problems. The answers are out there, I just don't know how to search for exactly what I am looking for. What is coming along well is my projects page. As of now on my c26ss1.github.io link, it just leads straight to the squares and nothing is there. But I have been working on something that I think is pretty cool, I just need to fix a few things before it is done. </p>
-
+	<div id="menu">
+		<div class = "button">Journal</div>
+	</div>
 
 	<div id="anim">
 		<a href="index.html">
-			<div class = "button1">
-   				 <div id="anim">Home</div>
-			</div>
-			
+			<div class = "button1">Home</div>
 		</a>
 	</div>
+
+	<div id="body"> <h3>Entry #1 10/3/22</h3><p>I think that Computer Science this year is going pretty well. I enjoy making the websites because it is visual and I can easily see my progress. I am looking forward for doing more work like this. </p><h3>Entry #2 10/11/22</h3><p>I enjoy making my website, it is cool to visualize your mistakes and progress. I am struggling with centering text, shapes, and images. I am a perfectionist when it comes to things like that, and it is hard to get alignment right. That being said, if I know what to look for, the internet is pretty helpful in solving coding issues. In the future I would like to expose myself to other parts of HTML and things to do. Right now, I feel pretty good with the basic stuff that we covered in class (divs, journals, and text), but I want to learn more so my websites can be more complex and functional. </p><h3>Entry #3 10/20/22</h3><p>I am having lots of trouble with images. I have tried to make it the background of my website and that failed. I have also tried to make the home button have a little icon instead of text and that didn't work too. I have also been having trouble with the animation and making it move. I made it move if it started from the div's original placement. However, as soon as I moved the div into my desired place(the bottom right corner), I cannot make it move arround. For both of the issues I have tried to fix them using the internet, but I have not found anything that fixed my problems. The answers are out there, I just don't know how to search for exactly what I am looking for. What is coming along well is my projects page. As of now on my c26ss1.github.io link, it just leads straight to the squares and nothing is there. But I have been working on something that I think is pretty cool, I just need to fix a few things before it is done. </p></div>
+
+
+
+
+
 </body>
 </html>
