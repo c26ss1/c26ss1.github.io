@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#box{
+			width: 120px;
+			height: 120px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image:url(mouse.png);
+			position: absolute;
+		}
+	body{
+		cursor: none;
+	}
+	</style>
+
+</head>
+<body>
+	<div id="box"></div>
+		<script type="text/javascript">
+			document.addEventListener("mousemove", function(event){
+				console.log(event.clientX, event.clientY)
+				console.log(event.clientX, event.clientY);
+				box.style.left = event.clientX -60 +"px";
+				box.style.top = event.clientY -60 +"px"; 
+
+			})
+		</script>
+
+</body>
+</html>

@@ -31,6 +31,7 @@
 			#anim {
 			}
 			.button1{
+
 				background-color: silver;
   				animation-name: example;
   				animation-duration: 5s;
@@ -39,7 +40,7 @@
 				color: #118ab2;
 				width: 12vw;
  				height: 80px;
-  				position: absolute;
+  				position: fixed;
   				bottom: 2vw;
   				right: 2vw;
   	
@@ -54,6 +55,19 @@
   			to {color: #118ab2;}
   	
 
+			}
+
+			@keyframes{
+				0%{bottom: 0vw;
+  					right: 2vw;}
+
+  				50%{bottom: 5vw;
+  					right: 5vw;}
+
+				100%{
+					bottom: 2vw;
+  					right: 2vw;	
+				}
 			}
 		
 
