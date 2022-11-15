@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			background-color: whitesmoke;
+		}
+		#box{
+			width: 120px;
+			height: 120px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image:url(turkey.png);
+			position: absolute;
+		}
+		#format{
+			margin-top: 10vw;
+			margin-bottom:10vw;
+ 			
+		}
+		#card{
+			height: 375px;
+			width: 500px;
+			background-color: orange;
+			text-align: center;
+			border: 6px solid darkred;
+			font-size:40px;
+			color: beige;
+			padding-top:125px;
+			margin-left: auto;
+ 			margin-right: auto;
+ 			
+			
+
+		}
+
+	</style>
+
+</head>
+<body>
+	<div id="box"></div>
+		<script type="text/javascript">
+			document.addEventListener("click", function(event){
+				console.log(event.clientX, event.clientY)
+				console.log(event.clientX, event.clientY);
+				box.style.left = event.clientX -60 +"px";
+				box.style.top = event.clientY -60 +"px"; 
+
+			})
+		</script>
+
+	<div id="format"><div id="card">Dear ___, <br> Thank you for everything. I am happy to celebrate thanksgiving with you!<br>From, Sam</div></div>
+	
+
+</body>
+</html>
