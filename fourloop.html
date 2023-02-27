@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		.bagel{
+			width:100px;
+			height:100px;
+			background-color:blue;
+
+		}
+		
+
+	</style>
+</head>
+<body>
+		<script type="text/javascript">		
+			function makeBlue(){
+				var blue = document.createElement('div');
+
+				document.body.appendChild(blue);
+				blue.classList.add("bagel");
+				}
+
+			for (var i=0; i<100; i=i+1){makeBlue()}
+		
+
+		</script>
+</body>
+</html>

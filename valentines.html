@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#heart{
+			background-image:url(heart.gif);
+			height:500px;
+			width:498px;
+			margin-left: auto;
+ 			margin-right: auto;
+
+
+		}
+		#gif{
+			margin-top: 10vw;
+			margin-bottom:10vw;
+
+		}
+
+		.hearto{
+			width:100px;
+			height:100px;
+			background-image: url(hearto.png);
+			display:inline-block;
+			position:absolute;
+			background-repeat: no-repeat;
+			background-size: contain;
+
+		}
+
+		.button{
+			background-image:url(heart.gif);
+			height:500px;
+			width:498px;
+			margin-left: auto;
+ 			margin-right: auto;
+
+
+			}
+
+	</style>
+</head>
+
+<body>
+
+<div id="gif">
+	<a href="vdaycard.html">
+		<div id="heart"></div>
+	</a>
+</div>
+
+
+	<script type="text/javascript">
+
+		document.addEventListener("mousemove",
+			
+			function makeHeart (event){
+			var hearts = document.createElement("div");
+			document.body.appendChild(hearts);
+			hearts.classList.add('hearto')
+			hearts.style.left = event.clientX+1 + "px";
+			hearts.style.top = event.clientY + "px";
+
+
+		})
+
+
+
+
+	</script>
+	
+</body>
+
+</html>

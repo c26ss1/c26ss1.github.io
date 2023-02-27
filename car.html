@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#car{
+			background-image: url(car.png);
+			height:150px;
+			width:300px;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="car"></div>
+
+	<script type="text/javascript">
+		buggy.style.left = "0px";
+		var x = parseInt(buggy.style.left);
+		
+		document.addEventListener("kendown",function(event){
+			console.log(x)
+			x=x=10;
+			buggy.style.left =  x + "px";
+			
+		})
+
+
+
+
+	</script>
+
+</body>
+</html>

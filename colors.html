@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		body{
+			background-color: rgb(256,80,200);
+		}
+		
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		document.addEventListener("mousemove", function(event){
+			console.log(event.clientX, event.clientY);
+
+			document.body.style.backgroundColor = "rgb(" + event.clientX + "," + event.clientY+",0)";
+		}
+		)
+	</script>
+
+</body>
+</html>

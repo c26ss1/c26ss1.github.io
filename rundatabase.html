@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		#table{
+			width:99%;
+			border:1px solid black;
+
+		}
+
+		td{
+			border:1px solid black;
+			height: 50px;
+		}
+
+		#button{
+			height:20px;
+			background-color: blue;
+			width:100px;
+		}
+
+
+		</style>
+
+</head>
+
+<body>
+	<table id="table">
+  		<tr>
+   			<td></td>
+ 	 	</tr>
+	</table>
+
+	<button id="button"></button>
+	<script type="text/javascript">
+		
+		button.addEventListener("click",function(){
+			var row = document.createElement("tr");
+			var cell = document.createElement("td")
+		row.appendChild(cell);
+		table.appendChild(row)
+		cell.classList.add("td")
+		})
+	</script>
+
+</body>
+</html>
