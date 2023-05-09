@@ -2,16 +2,23 @@
 <html>
 <head>
 	<title>Number Calculator</title>
+
+	<style>
+		body {
+			font-size: 30px;
+		}
+	</style>
+
 	<script>
 		function calculate() {
 			var number = document.getElementById("number").value;
 			var result = ((number * 0.85) - 92.5) / -0.15;
-			document.getElementById("result").innerHTML = "In order to get an A, you to get at least a " + result + "% on the math final.";
+			document.getElementById("result").innerHTML = "In order to get an A, you to get at least " + result + "% on the math final.";
 		}
 	</script>
 </head>
 <body>
-	<label for="number">Enter your current math rade:</label>
+	<label for="number">Enter your current math grade:</label>
 	<input type="number" id="number" name="number" required>
 	<button type="button" onclick="calculate()">Calculate</button>
 	<p id="result"></p>
