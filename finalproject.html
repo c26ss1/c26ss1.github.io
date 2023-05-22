@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table {
+ 			 border-collapse: collapse;
+		}
+		th, td {
+  			border: 1px solid black;
+ 			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+
+	<table id="myTable">
+  <tr>
+    <th>Place</th>
+    <th>Date</th>
+    <th>Distance(mlies)</th>
+    <th>Time</th>
+    <th>Pace</th>
+    <th>Heart Rate (avg BPM)</th>
+  </tr>
+  <tr>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+  </tr>
+</table>
+
+<button onclick="saveData()">Save Data</button>
+
+<button onclick="clearData()">Clear Data</button>
+
+<script type="text/javascript">
+
+function saveData() {
+  var table = document.getElementById("myTable");
+  var data = [];
+  for (var i = 1; i < table.rows.length; i++) {
+    var row = table.rows[i];
+    var rowData = [];
+    for (var j = 0; j < row.cells.length; j++) {
+      rowData.push(row.cells[j].innerText);
+    }
+    data.push(rowData);
+  }
+  localStorage.setItem("myTableData", JSON.stringify(data));
+}
+
+function loadData() {
+  var data = JSON.parse(localStorage.getItem("myTableData"));
+  if (data != null) {
+    var table = document.getElementById("myTable");
+    for (var i = 0; i < data.length; i++) {
+      var row = table.insertRow();
+      for (var j = 0; j < data[i].length; j++) {
+        var cell = row.insertCell();
+        cell.contentEditable = "true";
+        cell.innerText = data[i][j];
+      }
+    }
+  }
+}
+function clearData() {
+  localStorage.removeItem("myTableData");
+  location.reload();
+}
+
+loadData();
+
+</script>
+
+</body>
+</html>
