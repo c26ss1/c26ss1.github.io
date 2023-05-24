@@ -18,6 +18,7 @@
   <tr>
     <th>Place</th>
     <th>Date</th>
+    <th>Type</th>
     <th>Distance(mlies)</th>
     <th>Time</th>
     <th>Pace</th>
@@ -30,12 +31,18 @@
     <td contenteditable="true"></td>
     <td contenteditable="true"></td>
     <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
   </tr>
 </table>
 
 <button onclick="saveData()">Save Data</button>
 
+<button onclick="addRow()">Add Row</button>
+
+<button onclick="deleteTopRow()">Delete Top Row</button>
+
 <button onclick="clearData()">Clear Data</button>
+
 
 <script type="text/javascript">
 
@@ -67,10 +74,33 @@ function loadData() {
     }
   }
 }
+
+function addRow(){
+  saveData();
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(1);
+  for (var j=0; j < 7; j++) {
+    var cell = row.insertCell();
+    cell.contentEditable = "true";
+    cell.innerText = "";
+  }
+}
+
+function deleteTopRow() {
+  var table = document.getElementById("myTable");
+  if (table.rows.length > 1) {
+    var row = table.deleteRow(1);
+    saveData();
+  }
+}
+
 function clearData() {
+  if (window.confirm("Warning! This will erase all your running info!")) {
   localStorage.removeItem("myTableData");
   location.reload();
+  }
 }
+
 
 loadData();
 
