@@ -1,20 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Running Data</title>
-  <style type="text/css">
-    table {
-       border-collapse: collapse;
-    }
-    th, td {
-        border: 1px solid black;
-      padding: 5px;
-    }
-  </style>
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <table id="runningTable">
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style type="text/css">
+			#s1{
+				height:200px;
+				width:200px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="running.jpg" data-background-size="1200px"></section>
+				<section data-background-image="icons.png" data-background-size="1200px"></section>
+				<section><h1>https://c26ss1.github.io/finalproject.html</h1></section>
+				<section><pre><code data-line-numbers="">&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+	<title>Running Data</title>
+	<style type="text/css">
+		table {
+ 			 border-collapse: collapse;
+		}
+		th, td {
+  			border: 1px solid black;
+ 			padding: 5px;
+		}
+	</style>
+&lt;/head>
+&lt;body>
+	<table id="runningTable">
   <tr>
     <th>Place</th>
     <th>Date</th>
@@ -42,7 +70,6 @@
 <button onclick="deleteTopRow()">Delete Top Row</button>
 
 <button onclick="clearData()">Clear Data</button>
-
 
 <script type="text/javascript">
 
@@ -103,10 +130,28 @@ function clearData() {
   }
 }
 
-
 loadData();
 
 </script>
+&lt;/body>
+&lt;/html></code></pre></section>
+			</div>
+		</div>
 
-</body>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
 </html>
